@@ -1,0 +1,21 @@
+<mat-card>
+  <h2>Cadastrar Veículo</h2>
+  <form [formGroup]="veiculoForm" (ngSubmit)="cadastrarVeiculo()">
+    <mat-form-field>
+      <mat-label>Modelo</mat-label>
+      <input matInput formControlName="modelo">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Placa</mat-label>
+      <input matInput formControlName="placa">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Grupo ID</mat-label>
+      <input matInput formControlName="grupo_id">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Cadastrar</button>
+  </form>
+</mat-card>

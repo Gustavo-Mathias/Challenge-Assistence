@@ -1,0 +1,25 @@
+<mat-dialog-content>
+    <h2>Editar Veículo</h2>
+    <form [formGroup]="veiculoForm">
+      <mat-form-field class="full-width">
+        <mat-label>Modelo</mat-label>
+        <input matInput formControlName="modelo">
+      </mat-form-field>
+  
+      <mat-form-field class="full-width">
+        <mat-label>Placa</mat-label>
+        <input matInput formControlName="placa">
+      </mat-form-field>
+  
+      <mat-form-field class="full-width">
+        <mat-label>Grupo ID</mat-label>
+        <input matInput formControlName="grupo_id">
+      </mat-form-field>
+  
+      <mat-dialog-actions align="end">
+        <button mat-button (click)="cancelar()">Cancelar</button>
+        <button mat-raised-button color="primary" (click)="salvar()" [disabled]="!veiculoForm.valid">Salvar</button>
+      </mat-dialog-actions>
+    </form>
+  </mat-dialog-content>
+  

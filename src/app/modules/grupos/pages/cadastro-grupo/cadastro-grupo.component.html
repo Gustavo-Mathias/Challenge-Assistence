@@ -1,0 +1,17 @@
+<mat-card>
+    <h2>Cadastrar Grupo de Veículo</h2>
+    <form [formGroup]="grupoForm" (ngSubmit)="cadastrarGrupo()">
+      <mat-form-field class="full-width">
+        <mat-label>Nome do Grupo</mat-label>
+        <input matInput formControlName="nome">
+      </mat-form-field>
+  
+      <mat-form-field class="full-width">
+        <mat-label>Descrição</mat-label>
+        <textarea matInput formControlName="descricao"></textarea>
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit">Cadastrar</button>
+    </form>
+  </mat-card>
+  
