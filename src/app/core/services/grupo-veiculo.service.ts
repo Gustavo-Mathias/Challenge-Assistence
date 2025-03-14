@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { GrupoVeiculo } from '../../../../src/app/modules/grupo-veiculo.model';
+import { GrupoVeiculo } from '../../modules/grupo-veiculo.model';
 import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GrupoVeiculoService {
-  private apiUrl = environment.apiUrl + 'grupoveiculo';
+  private apiUrl = `${environment.apiUrl}grupoveiculo`; // URL dinâmica
 
   constructor(private http: HttpClient) {}
 

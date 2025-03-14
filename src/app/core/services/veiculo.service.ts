@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Veiculo } from '../models/veiculo.model';
+import { environment } from '../../../environments/environment'; 
 
 @Injectable({
   providedIn: 'root'
 })
 export class VeiculoService {
-  private apiUrl = 'http://localhost:5000/api/veiculos';
+  private apiUrl = `${environment.apiUrl}/veiculos`;
 
   constructor(private http: HttpClient) {}
 
@@ -26,5 +27,4 @@ export class VeiculoService {
   atualizarVeiculo(veiculo: Veiculo): Observable<Veiculo> {
     return this.http.put<Veiculo>(`${this.apiUrl}/${veiculo.id}`, veiculo);
   }
-  
 }

@@ -1,7 +1,8 @@
 export class Veiculo {
-    id!: number;
-    modelo!: string;
-    placa!: string;
-    grupo_id!: number;
-  }
-  
+  constructor(
+    public id: number = 0,
+    public modelo: string = '',
+    public placa: string = '',
+    public grupo_id: number = 0
+  ) {}
+}
